@@ -48,7 +48,7 @@ class Music extends Component {
             <div className="music">
                 <h1>Ambient Sounds</h1>
                 <ul>{list}</ul>
-                <audio ref={ref => this.player = ref} />
+                <audio loop ref={ref => this.player = ref} />
             </div>
         );
     }

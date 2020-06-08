@@ -1,16 +1,13 @@
-// import React, { Component } from "react";
+import React from "react";
 
-// class words extends Component {
-//     render() {
-//         let myArray = [
-//             "Apples",
-//             "Bananas",
-//             "Pears"
-//         ];
+function Generate() {
+    let myArray = [
+        "Apples",
+        "Bananas",
+        "Pears"
+    ];
 
-//         let randomItem = myArray[Math.floor(Math.random() * myArray.length)];
-//     }
-//     return
-// }
+    return randomItem = myArray[Math.floor(Math.random() * myArray.length)];
+}
 
-// export default words;
+export default Generate;

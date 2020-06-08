@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+.App {
+  font-family: Helvetica, sans-serif;
+  background-color: rgb(34, 34, 34);
+  height: 100vh;
+  color: rgb(250, 250, 250);
+  padding: 50px;
+}
+
+.App-title {
+  font-size: 50px;
+  padding: 25px 0;
+}
+
+//LOGO
+
+.dopplerLogo {
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.circle {
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 80%;
+  height: 80%;
+  .circle:hover & {
+    transform: translateX(10%);
+  }
+}
+
+.circle0 {
+  @extend .circle;
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.circle1 {
+  @extend .circle;
+  position: absolute;
+  transition: all .5s linear;
+  top: 10%;
+  left: 10%;
+}
+
+.circle2 {
+  @extend .circle;
+  position: absolute;
+  transition: all .5s linear;
+  top: 10%;
+  left: 10%;
+}
+
+.circle3 {
+  @extend .circle;
+  position: absolute;
+  transition: all .5s linear;
+  top: 10%;
+  left: 10%;
+}
+
+.circle4 {
+  @extend .circle;
+  position: absolute;
+  transition: all .5s linear;
+  top: 10%;
+  left: 10%;
+}
+
+//ABOUT
+
+.music,
+.about {
+  margin: 0 auto 30px;
+  border: 2px solid grey;
+  border-radius: 4px;
+  padding: 20px;
+  height: fit-content;
+  width: 300px;
+  background-color: rgb(22, 27, 31);
+  box-shadow: 0 3px 6px rgb(12, 12, 12);
+  &__text {
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+}
+
+//STOPWATCH
+
+.Stopwatch {
+  text-align: center;
+  margin: 30px auto;
+  border: 2px solid grey;
+  border-radius: 4px;
+  padding: 20px;
+  height: 175px;
+  width: 300px;
+  background-color: rgb(22, 27, 31);
+  box-shadow: 0 3px 6px rgb(12, 12, 12);
+}
+
+.Stopwatch-header {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+button {
+  background-color: #202b33;
+  border: solid 1px transparent;
+  border-radius: 4px;
+  padding: 10px 20px;
+  color: #ffffff;
+  font-size: 16px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #106ba3;
+}
+.Stopwatch button {
+  padding: 12px 32px;
+  font-size: 20px;
+}
+.Stopwatch-display {
+  font-size: 48px;
+  &__reset {
+    text-align: center;
+  }
+}

@@ -134,3 +134,25 @@ button:hover {
     text-align: center;
   }
 }
+
+//MUSIC
+
+.music {
+  &__header {
+    margin-bottom: 10px;
+  }
+  &__list {
+    list-style: none;
+    text-align: center;
+  }
+  &__listItem {
+    border: solid 1px grey;
+    background-color: #202b33;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  &__listItem:hover {
+    border: solid 1px white;
+    background-color: #106ba3;
+  }
+}

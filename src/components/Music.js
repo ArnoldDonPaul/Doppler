@@ -13,13 +13,13 @@ class Music extends Component {
         if (this.state.selectedTrack !== prevState.selectedTrack) {
             let track;
             switch (this.state.selectedTrack) {
-                case "Ocean Waves":
+                case "Calming":
                     track = oceanWaves
                     break;
-                case "Subway Commute":
+                case "Intermediate":
                     track = subwayCommute
                     break;
-                case "Busy Restaurant":
+                case "Challenging":
                     track = busyRestaurant
                     break;
                 default:
@@ -33,9 +33,10 @@ class Music extends Component {
     }
 
     render() {
-        const list = [{ id: 1, title: "Ocean Waves" }, { id: 2, title: "Subway Commute" }, { id: 3, title: "Busy Restaurant" }].map(item => {
+        const list = [{ id: 1, title: "Calming" }, { id: 2, title: "Intermediate" }, { id: 3, title: "Challenging" }].map(item => {
             return (
                 <li
+                    className="music__listItem"
                     key={item.id}
                     onClick={() => this.setState({ selectedTrack: item.title })}
                 >
@@ -46,8 +47,8 @@ class Music extends Component {
 
         return (
             <div className="music">
-                <h1>Ambient Sounds</h1>
-                <ul>{list}</ul>
+                <h1 className="music__header">Ambient Sounds</h1>
+                <ul className="music__list">{list}</ul>
                 <audio loop ref={ref => this.player = ref} />
             </div>
         );

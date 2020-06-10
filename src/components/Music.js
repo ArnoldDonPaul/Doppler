@@ -20,7 +20,7 @@ class Music extends Component {
         if (this.state.selectedTrack !== prevState.selectedTrack) {
             let track;
             switch (this.state.selectedTrack) {
-                case "Calming":
+                case "Beginner":
                     track = oceanWaves
                     break;
                 case "Intermediate":
@@ -41,7 +41,7 @@ class Music extends Component {
     }
 
     render() {
-        const list = [{ id: 1, title: "Calming" }, { id: 2, title: "Intermediate" }, { id: 3, title: "Challenging" }].map(item => {
+        const list = [{ id: 1, title: "Beginner" }, { id: 2, title: "Intermediate" }, { id: 3, title: "Challenging" }].map(item => {
             return (
                 <li
                     className="music__listItem"
@@ -59,7 +59,7 @@ class Music extends Component {
                 <ul className="music__list">{list}
                     {this.state.player === "playing" && (
                         <button className="music__listItem" onClick={() => this.setState({ player: "stopped" })}>
-                            Stop
+                            Silence
                         </button>
                     )}
                 </ul>

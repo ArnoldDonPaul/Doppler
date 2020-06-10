@@ -6,10 +6,17 @@ import busyRestaurant from "../assets/busy_restaurant.mp3"
 
 class Music extends Component {
     state = {
-        selectedTrack: null
+        selectedTrack: null,
+        player: "stopped"
     };
 
     componentDidUpdate(prevProps, prevState) {
+        if (this.state.player !== prevState.player) {
+            if (this.state.player === "stopped") {
+                this.player.pause();
+                this.setState({ selectedTrack: null });
+            }
+        }
         if (this.state.selectedTrack !== prevState.selectedTrack) {
             let track;
             switch (this.state.selectedTrack) {
@@ -28,6 +35,7 @@ class Music extends Component {
             if (track) {
                 this.player.src = track;
                 this.player.play()
+                this.setState({ player: "playing" })
             }
         }
     }
@@ -48,7 +56,13 @@ class Music extends Component {
         return (
             <div className="music">
                 <h1 className="music__header">Ambient Sounds</h1>
-                <ul className="music__list">{list}</ul>
+                <ul className="music__list">{list}
+                    {this.state.player === "playing" && (
+                        <button className="music__listItem" onClick={() => this.setState({ player: "stopped" })}>
+                            Stop
+                        </button>
+                    )}
+                </ul>
                 <audio loop ref={ref => this.player = ref} />
             </div>
         );

@@ -89,6 +89,7 @@
   &__text {
     margin-bottom: 15px;
     font-size: 16px;
+    cursor: pointer
   }
 }
 
@@ -100,7 +101,7 @@
   border: 2px solid grey;
   border-radius: 4px;
   padding: 20px;
-  height: 175px;
+  height: fit-content;
   width: 300px;
   background-color: rgb(22, 27, 31);
   box-shadow: 0 3px 6px rgb(12, 12, 12);
@@ -122,6 +123,7 @@ button {
   cursor: pointer;
 }
 button:hover {
+  border: solid 1px white;
   background-color: #106ba3;
 }
 .Stopwatch button {
@@ -146,10 +148,14 @@ button:hover {
     text-align: center;
   }
   &__listItem {
-    border: solid 1px grey;
     background-color: #202b33;
-    margin-bottom: 10px;
-    padding: 5px;
+    border: solid 1px transparent;
+    border-radius: 4px;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 16px;
+    margin: 0 5px 10px;
+    cursor: pointer;
   }
   &__listItem:hover {
     border: solid 1px white;

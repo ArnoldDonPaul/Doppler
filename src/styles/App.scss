@@ -6,7 +6,7 @@
 .App {
   font-family: Helvetica, sans-serif;
   background-color: rgb(34, 34, 34);
-  height: 100vh;
+  height: 100%;
   color: rgb(250, 250, 250);
   padding: 50px;
 }
@@ -88,8 +88,23 @@
   box-shadow: 0 3px 6px rgb(12, 12, 12);
   &__text {
     margin-bottom: 15px;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer
+  }
+  &__text:hover {
+    color:lightgrey;
+  }
+  &__textExpanded {
+    color: lightgrey;
+    margin-bottom: 15px;
+    font-size: 16px;
+    margin-left: 20px;
+    list-style: circle;
+  }
+  &__expandedList {
+    border-bottom: solid 1px grey;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
   }
 }
 
@@ -124,7 +139,7 @@ button {
 }
 button:hover {
   border: solid 1px white;
-  background-color: #106ba3;
+  background-color: black;
 }
 .Stopwatch button {
   padding: 12px 32px;
@@ -159,6 +174,6 @@ button:hover {
   }
   &__listItem:hover {
     border: solid 1px white;
-    background-color: #106ba3;
+    background-color: black;
   }
 }

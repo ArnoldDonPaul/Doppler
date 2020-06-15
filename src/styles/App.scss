@@ -3,10 +3,11 @@
     padding: 0;
     box-sizing: border-box;
   }
+
 .App {
+  height: 100%;
   font-family: Helvetica, sans-serif;
   background-color: rgb(34, 34, 34);
-  height: 100%;
   color: rgb(250, 250, 250);
   padding: 50px;
 }
@@ -102,9 +103,20 @@
     list-style: circle;
   }
   &__expandedList {
+    margin-bottom: 5px;
+  }
+  &__expandedWrapper {
     border-bottom: solid 1px grey;
-    padding-bottom: 5px;
     margin-bottom: 10px;
+    padding-bottom: 5px;
+  }
+  &__minimizeExpanded {
+    text-align: right;
+    color: lightgrey;
+    cursor: pointer;
+  }
+  &__minimizeExpanded:hover {
+    color: white;
   }
 }
 
@@ -112,7 +124,7 @@
 
 .Stopwatch {
   text-align: center;
-  margin: 30px auto;
+  margin: 30px auto 150px;
   border: 2px solid grey;
   border-radius: 4px;
   padding: 20px;
@@ -176,4 +188,78 @@ button:hover {
     border: solid 1px white;
     background-color: black;
   }
+}
+
+//FLAME
+
+.wrapper {
+  position: absolute;
+  display: block;
+  left: 50%;
+  margin-left: -40px;
+}
+
+.red {
+  width: 80px;
+  height: 80px;
+  background: orangered;
+  box-shadow: 0px 0px 10px 5px orangered;
+}
+.orange {
+  left:10px;
+  width: 60px;
+  height: 60px;
+  background: orange;
+  box-shadow: 0px 0px 12px 6px orange;
+}
+.gold {
+  left:18px;
+  width: 45px;
+  height: 45px;
+  background: gold;
+  box-shadow: 0px 0px 9px 4px gold;
+}
+.white {
+  left:22px;
+  width: 35px;
+  height: 35px;
+  background: lightyellow;
+  box-shadow: 0px 0px 9px 4px lightyellow;
+}
+.blue {
+  left:32px;
+  width: 15px;
+  height: 15px;
+  background: darkblue;
+  box-shadow: 0px 0px 15px 10px darkblue;
+}
+.black {
+  left:20px;
+  width: 40px;
+  height: 40px;
+  bottom:-50px;
+  background:  rgb(34, 34, 34);
+  box-shadow: 0px 0px 15px 10px rgb(34, 34, 34);
+}
+.base {
+  border-radius: 50%;
+  position: absolute;
+}
+.flame-wrapper {
+  position: relative;
+  animation: flicker 3ms ease-in infinite;
+}
+.flame {
+  bottom: 0;
+  position: absolute;
+  border-radius: 50% 0% 50% 50%;
+  transform: rotate(-45deg);
+}
+@keyframes flicker {
+  0% {transform: rotate(-1deg);}
+  20% {transform: rotate(2deg) scaleY(1.05);}
+  40% {transform: rotate(-1deg);}
+  60% {transform: rotate(1deg);}
+  80% {transform: rotate(-1deg) scaleY(0.90);}
+  100% {transform: rotate(1deg);}
 }

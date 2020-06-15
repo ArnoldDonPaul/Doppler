@@ -6,6 +6,7 @@ import About from "./components/About";
 // import WPM from "./components/WPM";
 import Music from "./components/Music";
 import Stopwatch from "./components/Stopwatch";
+import Flame from "./components/Flame"
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
         {/* <WPM /> */}
         <Music />
         <Stopwatch />
+        <Flame />
       </div >
     )
   }

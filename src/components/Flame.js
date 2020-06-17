@@ -4,14 +4,16 @@ import "../styles/App.scss";
 class Flame extends Component {
     render() {
         return (
-            <div class="wrapper">
-                <div class="flame-wrapper">
-                    <div class="flame red"></div>
-                    <div class="flame orange"></div>
-                    <div class="flame gold"></div>
-                    <div class="flame white"></div>
-                    <div class="base blue"></div>
-                    <div class="base black"></div>
+            <div className="wrapper">
+                <div className="flame-wrapper">
+                    <div className="clickBox">
+                        <div className="flame red"></div>
+                        <div className="flame orange"></div>
+                        <div className="flame gold"></div>
+                        <div className="flame white"></div>
+                    </div>
+                    <div className="base blue"></div>
+                    <div className="base black"></div>
                 </div>
             </div>
         )

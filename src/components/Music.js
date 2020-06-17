@@ -26,7 +26,7 @@ class Music extends Component {
                 case "Intermediate":
                     track = subwayCommute
                     break;
-                case "Challenging":
+                case "Advanced":
                     track = busyRestaurant
                     break;
                 default:
@@ -41,7 +41,7 @@ class Music extends Component {
     }
 
     render() {
-        const list = [{ id: 1, title: "Beginner" }, { id: 2, title: "Intermediate" }, { id: 3, title: "Challenging" }].map(item => {
+        const list = [{ id: 1, title: "Beginner" }, { id: 2, title: "Intermediate" }, { id: 3, title: "Advanced" }].map(item => {
             return (
                 <li
                     className="music__listItem"
@@ -56,11 +56,12 @@ class Music extends Component {
         return (
             <div className="music">
                 <h1 className="music__header">Ambient Sounds</h1>
-                <ul className="music__list">{list}
+                <ul className="music__list">
+                    {list}
                     {this.state.player === "playing" && (
-                        <button className="music__listItem" onClick={() => this.setState({ player: "stopped" })}>
+                        <li className="music__listItem" onClick={() => this.setState({ player: "stopped" })}>
                             Silence
-                        </button>
+                        </li>
                     )}
                 </ul>
                 <audio loop ref={ref => this.player = ref} />

@@ -22,3 +22,8 @@ ADVANCED
 a test of your ability to drown out distractions
 
 Challenge Complete type message when finished meditation# Doppler
+
+Candle Flame
+
+- serves as a focal point for the user
+- Whats This? :hover to expand a section explaining the focal point

@@ -92,6 +92,9 @@
     font-size: 20px;
     cursor: pointer
   }
+  &__text:last-child {
+    margin-bottom: 0;
+  }
   &__text:hover {
     color:lightgrey;
   }
@@ -107,8 +110,11 @@
   }
   &__expandedWrapper {
     border-bottom: solid 1px grey;
-    margin-bottom: 10px;
     padding-bottom: 5px;
+    margin-bottom: 15px;
+  }
+  &__expandedWrapper:last-child {
+    margin-bottom: 0;
   }
   &__minimizeExpanded {
     text-align: right;
@@ -122,7 +128,7 @@
 
 //STOPWATCH
 
-.Stopwatch {
+.stopwatch {
   text-align: center;
   margin: 30px auto 150px;
   border: 2px solid grey;
@@ -134,9 +140,14 @@
   box-shadow: 0 3px 6px rgb(12, 12, 12);
 }
 
-.Stopwatch-header {
+.stopwatchHeader {
   font-size: 40px;
   font-weight: bold;
+}
+
+.stopwatchButtons {
+  display: flex;
+  justify-content: center;
 }
 
 button {
@@ -146,22 +157,19 @@ button {
   padding: 10px 20px;
   color: #ffffff;
   font-size: 16px;
-  margin: 0 5px;
+  margin: 10px 5px;
   cursor: pointer;
 }
 button:hover {
   border: solid 1px white;
   background-color: black;
 }
-.Stopwatch button {
-  padding: 12px 32px;
+.stopwatch button {
+  padding: 12px 25px;
   font-size: 20px;
 }
-.Stopwatch-display {
+.stopwatchDisplay {
   font-size: 48px;
-  &__reset {
-    text-align: center;
-  }
 }
 
 //MUSIC
@@ -197,6 +205,10 @@ button:hover {
   display: block;
   left: 50%;
   margin-left: -40px;
+}
+
+.clickBox {
+  cursor: pointer;
 }
 
 .red {

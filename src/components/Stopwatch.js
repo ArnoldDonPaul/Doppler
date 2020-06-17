@@ -40,21 +40,23 @@ class Stopwatch extends Component {
         let minutes = ("0" + (Math.floor(timerTime / 60000) % 60)).slice(-2);
         let hours = ("0" + Math.floor(timerTime / 3600000)).slice(-2);
         return (
-            <div className="Stopwatch">
-                <div className="Stopwatch-display">
+            <div className="stopwatch">
+                <div className="stopwatchDisplay">
                     {hours} : {minutes} : {seconds}
-                    {this.state.timerOn === false && this.state.timerTime === 0 && (
-                        <button onClick={this.startTimer}>Start</button>
-                    )}
-                    {this.state.timerOn === true && (
-                        <button onClick={this.stopTimer}>Stop</button>
-                    )}
-                    {this.state.timerOn === false && this.state.timerTime > 0 && (
-                        <button onClick={this.startTimer}>Resume</button>
-                    )}
-                    {this.state.timerOn === false && this.state.timerTime > 0 && (
-                        <button onClick={this.resetTimer}>Reset</button>
-                    )}
+                    <div className="stopwatchButtons">
+                        {this.state.timerOn === false && this.state.timerTime === 0 && (
+                            <button onClick={this.startTimer}>Start</button>
+                        )}
+                        {this.state.timerOn === true && (
+                            <button onClick={this.stopTimer}>Stop</button>
+                        )}
+                        {this.state.timerOn === false && this.state.timerTime > 0 && (
+                            <button onClick={this.startTimer}>Resume</button>
+                        )}
+                        {this.state.timerOn === false && this.state.timerTime > 0 && (
+                            <button onClick={this.resetTimer}>Reset</button>
+                        )}
+                    </div>
                 </div>
             </div>
         );

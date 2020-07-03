@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import "../styles/App.scss";
+import "../styles/Ambience.scss";
 import oceanWaves from "../assets/ocean_waves.mp3"
 import subwayCommute from "../assets/subway_commute.mp3"
 import busyRestaurant from "../assets/busy_restaurant.mp3"
 
-class Music extends Component {
+class Ambience extends Component {
     state = {
         selectedTrack: null,
         player: "stopped"
@@ -44,7 +44,7 @@ class Music extends Component {
         const list = [{ id: 1, title: "Beginner" }, { id: 2, title: "Intermediate" }, { id: 3, title: "Advanced" }].map(item => {
             return (
                 <li
-                    className="music__listItem"
+                    className="ambience__listItem"
                     key={item.id}
                     onClick={() => this.setState({ selectedTrack: item.title })}
                 >
@@ -54,12 +54,12 @@ class Music extends Component {
         });
 
         return (
-            <div className="music">
-                <h1 className="music__header">Ambient Sounds</h1>
-                <ul className="music__list">
+            <div className="ambience">
+                <h1 className="ambience__header">Ambience</h1>
+                <ul className="ambience__list">
                     {list}
                     {this.state.player === "playing" && (
-                        <li className="music__listItem" onClick={() => this.setState({ player: "stopped" })}>
+                        <li className="ambience__listItem" onClick={() => this.setState({ player: "stopped" })}>
                             Silence
                         </li>
                     )}
@@ -70,4 +70,4 @@ class Music extends Component {
     }
 }
 
-export default Music;
+export default Ambience;

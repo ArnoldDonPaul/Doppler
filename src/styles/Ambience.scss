@@ -1,0 +1,45 @@
+
+.ambience {
+    margin: 0 auto 30px;
+    border: 2px solid grey;
+    border-radius: 4px;
+    padding: 20px;
+    height: fit-content;
+    width: 300px;
+    background-color: rgb(22, 27, 31);
+    box-shadow: 0 3px 6px rgb(12, 12, 12);
+    &__header {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    &__list {
+      list-style: none;
+      text-align: center;
+    }
+    &__listItem {
+      background-color: #202b33;
+      border: solid 1px transparent;
+      border-radius: 4px;
+      padding: 10px 20px;
+      color: #ffffff;
+      font-size: 20px;
+      margin: 0 5px 10px;
+      cursor: pointer;
+    }
+    &__listItem:nth-child(4) {
+      animation: fadeIn linear .4s;
+    }
+    &__listItem:hover {
+      border: solid 1px white;
+      background-color: black;
+    }
+  }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

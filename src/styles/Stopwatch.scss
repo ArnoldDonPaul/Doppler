@@ -1,0 +1,42 @@
+.stopwatch {
+    text-align: center;
+    margin: 30px auto 150px;
+    border: 2px solid grey;
+    border-radius: 4px;
+    padding: 20px;
+    height: fit-content;
+    width: 300px;
+    background-color: rgb(22, 27, 31);
+    box-shadow: 0 3px 6px rgb(12, 12, 12);
+    &__buttonsWrapper {
+      display: flex;
+      justify-content: center;
+    }
+    &__button {
+      background-color: #202b33;
+      border: solid 1px transparent;
+      border-radius: 4px;
+      padding: 12px 25px;
+      color: #ffffff;
+      font-size: 20px;
+      margin: 10px 5px;
+      cursor: pointer;
+      animation: fadeIn linear .4s;
+    }
+    &__button:hover {
+      border: solid 1px white;
+      background-color: black;
+    }
+    &__display {
+      font-size: 48px;
+    }
+  }
+  
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

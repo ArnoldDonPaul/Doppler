@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../styles/App.scss";
+import "../styles/Stopwatch.scss";
 
 class Stopwatch extends Component {
     state = {
@@ -41,20 +41,20 @@ class Stopwatch extends Component {
         let hours = ("0" + Math.floor(timerTime / 3600000)).slice(-2);
         return (
             <div className="stopwatch">
-                <div className="stopwatchDisplay">
+                <div className="stopwatch__display">
                     {hours} : {minutes} : {seconds}
-                    <div className="stopwatchButtons">
+                    <div className="stopwatch__buttonsWrapper">
                         {this.state.timerOn === false && this.state.timerTime === 0 && (
-                            <button onClick={this.startTimer}>Start</button>
+                            < button className="stopwatch__button" onClick={this.startTimer}>Start</button>
                         )}
                         {this.state.timerOn === true && (
-                            <button onClick={this.stopTimer}>Stop</button>
+                            < button className="stopwatch__button" onClick={this.stopTimer}>Stop</button>
                         )}
                         {this.state.timerOn === false && this.state.timerTime > 0 && (
-                            <button onClick={this.startTimer}>Resume</button>
+                            < button className="stopwatch__button" onClick={this.startTimer}>Resume</button>
                         )}
                         {this.state.timerOn === false && this.state.timerTime > 0 && (
-                            <button onClick={this.resetTimer}>Reset</button>
+                            < button className="stopwatch__button" onClick={this.resetTimer}>Reset</button>
                         )}
                     </div>
                 </div>

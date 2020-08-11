@@ -1,0 +1,80 @@
+.tips {
+  margin: 225px auto 0;
+  border: 2px solid grey;
+  border-radius: 4px;
+  padding: 30px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 300px;
+  background-color: #161b1f;
+  -webkit-box-shadow: 0 3px 6px #0c0c0c;
+          box-shadow: 0 3px 6px #0c0c0c;
+}
+
+.tips__text {
+  margin-bottom: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.tips__text:last-child {
+  margin-bottom: 0;
+}
+
+.tips__text:hover {
+  color: lightgrey;
+}
+
+.tips__textExpanded {
+  color: lightgrey;
+  margin-bottom: 15px;
+  font-size: 16px;
+  margin-left: 20px;
+  list-style: circle;
+}
+
+.tips__expandedList {
+  margin-bottom: 5px;
+}
+
+.tips__expandedWrapper {
+  border-bottom: solid 1px grey;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  -webkit-animation: fadeIn linear .4s;
+          animation: fadeIn linear .4s;
+}
+
+.tips__expandedWrapper:last-child {
+  margin-bottom: 0;
+}
+
+.tips__minimizeExpanded {
+  text-align: right;
+  color: lightgrey;
+  cursor: pointer;
+}
+
+.tips__minimizeExpanded:hover {
+  color: white;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=Tips.css.map */

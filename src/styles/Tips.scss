@@ -1,13 +1,11 @@
 
 .tips {
-  margin: 225px auto 0;
-  border: 2px solid grey;
+  margin: 120px auto 0;
   border-radius: 4px;
   padding: 30px;
   height: fit-content;
-  width: 300px;
+  width: 100%;
   background-color: rgb(22, 27, 31);
-  box-shadow: 0 3px 6px rgb(12, 12, 12);
   &__text {
     margin-bottom: 15px;
     font-size: 20px;
@@ -33,7 +31,7 @@
     border-bottom: solid 1px grey;
     padding-bottom: 5px;
     margin-bottom: 15px;
-    animation: fadeIn linear .4s;
+    animation: fadeIn ease-in-out .4s;
   }
   &__expandedWrapper:last-child {
     margin-bottom: 0;

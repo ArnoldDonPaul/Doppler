@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.App {
+  height: 100%;
+  font-family: Helvetica, sans-serif;
+  background-color: #222222;
+  color: #fafafa;
+  padding: 50px;
+}
+/*# sourceMappingURL=App.css.map */

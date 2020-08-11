@@ -1,0 +1,52 @@
+.workout {
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    &__title {
+        margin: 0 auto 10px;
+        font-size: 32px;
+        text-transform: capitalize;
+    }
+    &__instruction {
+        width: 300px;
+        margin: 0 auto 15px;
+        font-size: 20px;
+    }
+}
+
+.circuit {
+    &__button {
+        background-color: #202b33;
+        border: solid 1px transparent;
+        border-radius: 4px;
+        padding: 12px 25px;
+        color: #ffffff;
+        font-size: 20px;
+        margin: 10px 5px 20px;
+        cursor: pointer;
+        animation: fadeIn linear .4s;
+        list-style: none;
+        border: solid 1px grey
+    }
+    &__button:hover {
+        border: solid 1px white;
+        background-color: black;
+    }
+    &__button:active {
+        background-color: #202b33;
+    }
+    &__box {
+        height: 288px;
+        width: 300px;
+        margin: 0 auto;
+        background-color: #161b1f;
+        border: solid 1px grey;
+        border-radius: 4px;
+    }
+    &__exercise {
+        margin: 0 auto;
+        padding: 20px 0;
+        font-size: 28px;
+        text-transform: capitalize;
+    }
+}

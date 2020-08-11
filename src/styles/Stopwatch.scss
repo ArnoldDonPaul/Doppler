@@ -1,20 +1,23 @@
 .stopwatch {
     text-align: center;
-    margin: 30px auto 150px;
-    border: 2px solid grey;
+    margin: 0 auto;
     border-radius: 4px;
-    padding: 20px;
-    height: fit-content;
-    width: 300px;
+    padding: 100px 20px;
+    height: 500px;
+    width: 100%;
     background-color: rgb(22, 27, 31);
-    box-shadow: 0 3px 6px rgb(12, 12, 12);
+    &__title {
+      margin: 0 auto 10px;
+      font-size: 32px;
+      text-transform: capitalize;
+    }
     &__buttonsWrapper {
       display: flex;
       justify-content: center;
     }
     &__button {
       background-color: #202b33;
-      border: solid 1px transparent;
+      border: solid 1px grey;
       border-radius: 4px;
       padding: 12px 25px;
       color: #ffffff;
@@ -22,10 +25,14 @@
       margin: 10px 5px;
       cursor: pointer;
       animation: fadeIn linear .4s;
+      list-style: none;
     }
     &__button:hover {
       border: solid 1px white;
       background-color: black;
+    }
+    &__button:active {
+      background-color: #202b33;
     }
     &__display {
       font-size: 48px;

@@ -1,0 +1,65 @@
+.stopwatch {
+  text-align: center;
+  margin: 30px auto 150px;
+  border: 2px solid grey;
+  border-style: groove;
+  border-radius: 4px;
+  padding: 20px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 300px;
+  background-color: #161b1f;
+  -webkit-box-shadow: 0 3px 6px #0c0c0c;
+          box-shadow: 0 3px 6px #0c0c0c;
+}
+
+.stopwatch__buttonsWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.stopwatch__button {
+  background-color: #202b33;
+  border: solid 1px transparent;
+  border-radius: 4px;
+  padding: 12px 25px;
+  color: #ffffff;
+  font-size: 20px;
+  margin: 10px 5px;
+  cursor: pointer;
+  -webkit-animation: fadeIn linear .4s;
+          animation: fadeIn linear .4s;
+}
+
+.stopwatch__button:hover {
+  border: solid 1px white;
+  background-color: black;
+}
+
+.stopwatch__display {
+  font-size: 48px;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=Stopwatch.css.map */

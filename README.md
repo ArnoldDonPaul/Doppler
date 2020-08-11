@@ -10,3 +10,8 @@ Candle Flame
 COUNTDOWN TIMER
 
 WPM MINI GAME
+
+shreddit:
+a textbox that can be shredded
+- overflow: scroll
+- position fixed (on text)

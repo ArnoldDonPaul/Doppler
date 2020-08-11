@@ -1,0 +1,58 @@
+.dopplerLogo {
+  margin: 0 auto 50px;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+
+.circle, .circle0, .circle1, .circle2, .circle3, .circle4 {
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 80%;
+  height: 80%;
+}
+
+.circle:hover .circle, .circle0:hover .circle, .circle1:hover .circle, .circle2:hover .circle, .circle3:hover .circle, .circle4:hover .circle, .circle:hover .circle0, .circle0:hover .circle0, .circle1:hover .circle0, .circle2:hover .circle0, .circle3:hover .circle0, .circle4:hover .circle0, .circle:hover .circle1, .circle0:hover .circle1, .circle1:hover .circle1, .circle2:hover .circle1, .circle3:hover .circle1, .circle4:hover .circle1, .circle:hover .circle2, .circle0:hover .circle2, .circle1:hover .circle2, .circle2:hover .circle2, .circle3:hover .circle2, .circle4:hover .circle2, .circle:hover .circle3, .circle0:hover .circle3, .circle1:hover .circle3, .circle2:hover .circle3, .circle3:hover .circle3, .circle4:hover .circle3, .circle:hover .circle4, .circle0:hover .circle4, .circle1:hover .circle4, .circle2:hover .circle4, .circle3:hover .circle4, .circle4:hover .circle4 {
+  -webkit-transform: translateX(10%);
+          transform: translateX(10%);
+}
+
+.circle0 {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.circle1 {
+  position: absolute;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+  top: 10%;
+  left: 10%;
+}
+
+.circle2 {
+  position: absolute;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+  top: 10%;
+  left: 10%;
+}
+
+.circle3 {
+  position: absolute;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+  top: 10%;
+  left: 10%;
+}
+
+.circle4 {
+  position: absolute;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+  top: 10%;
+  left: 10%;
+}
+/*# sourceMappingURL=Hero.css.map */

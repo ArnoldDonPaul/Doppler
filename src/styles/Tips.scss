@@ -1,14 +1,39 @@
+.finishButton {
+  background-color: #202b33;
+  border: solid 1px grey;
+  border-radius: 4px;
+  padding: 12px 25px;
+  color: #ffffff;
+  font-size: 20px;
+  margin: 0 auto;
+  cursor: pointer;
+  list-style: none;
+  text-decoration: none;
+}
+
+.buttonBox {
+  width: 100%;
+  text-align: center;
+  margin-top: 150px;
+}
 
 .tips {
   margin: 0 auto;
-  padding: 160px 30px 30px;
+  padding: 25px 30px 30px;
   height: fit-content;
   width: 100%;
-  background-color: rgb(22, 27, 31);
+  background-color: #161b1f;
   &__text {
     margin-bottom: 15px;
+    padding: 10px;
     font-size: 20px;
-    cursor: pointer
+    cursor: pointer;
+    background-color: #202b33;
+    border: solid 1px grey;
+    border-radius: 4px;
+  }
+  &__text:active {
+    background-color: #161b1f;
   }
   &__text:last-child {
     margin-bottom: 0;

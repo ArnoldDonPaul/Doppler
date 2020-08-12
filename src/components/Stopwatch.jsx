@@ -44,9 +44,9 @@ class Stopwatch extends Component {
         return (
             <section>
                 <div className="stopwatch">
-                    <p className="stopwatch__text">Start the timer and follow the instructions below</p>
-                    <p className="stopwatch__text">Use the flame as a focal point if you need it</p>
                     <p className="stopwatch__text">Be present for 2 minutes</p>
+                    <p className="stopwatch__text">Use the flame as a focal point if you need it</p>
+                    <p className="stopwatch__text">Start the timer when you're ready</p>
                     <div className="stopwatch__display">
                         {minutes} : {seconds}
                         <ul className="stopwatch__buttonsWrapper">

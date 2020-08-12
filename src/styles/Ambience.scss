@@ -5,11 +5,12 @@
   padding: 0 0 30px;
   &__title {
     font-size: 32px;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
   }
   &__text {
-    font-size: 22px;
-    margin-bottom: 15px;
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: lightgrey;
   }
 }
 
@@ -17,7 +18,7 @@
     margin: 0 auto;
     border-radius: 4px;
     padding: 40px 20px 20px;
-    height: 570px;
+    height: 700px;
     width: 100%;
     text-align: center;
     background-color: rgb(22, 27, 31);

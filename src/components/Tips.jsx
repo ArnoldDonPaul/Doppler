@@ -10,7 +10,7 @@ class Tips extends Component {
     render() {
         return (
             <div className="tips">
-                <p className="tips__text" onClick={() => this.setState({ inhaleExpanded: true })}>Inhale deeply through the nose and into the pit of your stomach.</p>
+                <p className="tips__text" onClick={() => this.setState({ inhaleExpanded: true })}>Inhale deeply through your nose and into the pit of your stomach.</p>
                 {
                     this.state.inhaleExpanded === true && (
                         <div className="tips__expandedWrapper">

@@ -1,29 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import "./styles/App.scss";
+import Main from './pages/Main';
+import Circuit from './pages/Circuit';
+import Meditate from './pages/Meditate';
 
-
-import Hero from "./components/Hero.jsx"
-import Workout from "./components/Workout.jsx"
-// import Countdown from "./components/Countdown.jsx"
-import Tips from "./components/Tips.jsx";
-import Ambience from "./components/Ambience.jsx";
-import Stopwatch from "./components/Stopwatch.jsx";
-import Flame from "./components/Flame.jsx"
-
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Hero />
-        <Workout />
-        {/* <Countdown /> */}
-        <Ambience />
-        <Stopwatch />
-        <Flame />
-        <Tips />
-      </div >
-    )
-  }
+function App() {
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Switch>
+          <Route exact path='/' component={Main} />
+          <Route path='/circuit' component={Circuit} />
+          <Route path='/meditate' component={Meditate} />
+        </Switch>
+      </BrowserRouter>
+    </div >
+  )
 }
 
 export default App;

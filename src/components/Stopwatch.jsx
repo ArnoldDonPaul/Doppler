@@ -5,7 +5,7 @@ class Stopwatch extends Component {
     state = {
         timerOn: false,
         timerStart: 0,
-        timerTime: 0
+        timerTime: 0,
     };
 
     startTimer = () => {
@@ -34,17 +34,19 @@ class Stopwatch extends Component {
     };
 
     render() {
+
         const { timerTime } = this.state;
         // let centiseconds = ("0" + (Math.floor(timerTime / 10) % 100)).slice(-2);
         let seconds = ("0" + (Math.floor(timerTime / 1000) % 60)).slice(-2);
         let minutes = ("0" + (Math.floor(timerTime / 60000) % 60)).slice(-2);
         // let hours = ("0" + Math.floor(timerTime / 3600000)).slice(-2);
+
         return (
             <section>
                 <div className="stopwatch">
-                    {/* <div>
-                        <h1 className="stopwatch__title">Timer</h1>
-                    </div> */}
+                    <p className="stopwatch__text">Start the timer and follow the instructions below</p>
+                    <p className="stopwatch__text">Use the flame as a focal point if you need it</p>
+                    <p className="stopwatch__text">Be present for 2 minutes</p>
                     <div className="stopwatch__display">
                         {minutes} : {seconds}
                         <ul className="stopwatch__buttonsWrapper">

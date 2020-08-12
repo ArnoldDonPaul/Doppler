@@ -1,6 +1,6 @@
 .hero {
   padding-top: 50px;
-  height: 812px;
+  height: 100vh;
 }
 
 .dopplerLogo {
@@ -59,3 +59,40 @@
     top: 10%;
     left: 10%;
   }
+
+.welcome {
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  &__title {
+    font-size: 32px;
+    text-transform: capitalize;
+    margin: 20px 0;
+  }
+  &__nav {
+    font-size: 28px;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: white;
+    margin: 20px 0;
+    background-color: #202b33;
+    border: solid 1px grey;
+    border-radius: 4px;
+    padding: 12px 25px;
+    color: #ffffff;
+    font-size: 20px;
+    margin: 10px 5px;
+    cursor: pointer;
+    list-style: none;
+  }
+  &__nav:hover {
+    border: solid 1px white;
+    background-color: black;
+  }
+  &__nav:active {
+    background-color: #202b33;
+  }
+}

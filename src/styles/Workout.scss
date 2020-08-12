@@ -1,16 +1,17 @@
 .workout {
     width: 100%;
-    height: 500px;
+    height: fit-content;
     text-align: center;
+    padding-top: 40px;
     &__title {
         margin: 0 auto 10px;
         font-size: 32px;
         text-transform: capitalize;
     }
     &__instruction {
-        width: 300px;
-        margin: 0 auto 15px;
-        font-size: 20px;
+        width: 80%;
+        margin: 25px auto;
+        font-size: 29px;
     }
 }
 
@@ -37,7 +38,7 @@
     }
     &__box {
         height: 288px;
-        width: 300px;
+        width: 80%;
         margin: 0 auto;
         background-color: #161b1f;
         border: solid 1px grey;
@@ -45,8 +46,9 @@
     }
     &__exercise {
         margin: 0 auto;
+        width: 250px;
         padding: 20px 0;
-        font-size: 28px;
+        font-size: 25px;
         text-transform: capitalize;
     }
 }

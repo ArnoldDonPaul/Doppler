@@ -68,6 +68,7 @@ class Workout extends Component {
         return (
             <section className="workout">
                 <h1 className="workout__title">3 minute workout</h1>
+                <p className="workout__instruction">Create a circuit and start the timer</p>
                 <p className="workout__instruction">Complete 45 seconds of each exercise back-to-back!</p>
                 <div className="circuit">
                     <button className="circuit__button" onClick={this.getWorkout}>Create Circuit</button>
@@ -78,6 +79,7 @@ class Workout extends Component {
                         <p className="circuit__exercise">{this.state.core}</p>
                     </div>
                 </div>
+                <p className="workout__instruction">Once you start, there's no stopping</p>
             </section>
         )
     }

@@ -1,64 +1,123 @@
 import React, { Component } from "react";
-import "../styles/App.scss";
+import { Link } from "react-router-dom";
+import "../styles/Countdown.scss";
 
 class Countdown extends Component {
-    state = {
-        timerOn: false,
-        timerStart: 0,
-        timerTime: 0
-    };
+    constructor() {
+        super();
+        this.state = { time: {}, seconds: 180 };
+        this.timer = 0;
+        this.startTimer = this.startTimer.bind(this);
+        this.countDown = this.countDown.bind(this);
+        this.exerciseComplete = false;
+        this.exercise1 = '☆';
+        this.exercise2 = '☆';
+        this.exercise3 = '☆';
+        this.exercise4 = '☆';
+    }
 
-    startTimer = () => {
-        this.setState({
-            timerOn: true,
-            timerTime: this.state.timerTime,
-            timerStart: this.state.timerTime
-        });
-        this.timer = setInterval(() => {
-            const newTime = this.state.timerTime - 10;
-            if (newTime >= 0) {
-                this.setState({
-                    timerTime: newTime
-                });
-            } else {
-                clearInterval(this.timer);
-                this.setState({ timerOn: false });
-                alert("Countdown ended");
-            }
-        }, 10);
-    };
+    secondsToTime(secs) {
 
-    resetTimer = () => {
-        if (this.state.timerOn === false);
+        let divisor_for_minutes = secs % (60 * 60);
+        let minutes = Math.floor(divisor_for_minutes / 60);
+
+        let divisor_for_seconds = divisor_for_minutes % 60;
+        let seconds = Math.ceil(divisor_for_seconds);
+
+        let obj = {
+            "m": minutes,
+            "s": seconds
+        };
+
+        return obj
+    }
+
+    componentDidMount() {
+        let timeLeftVar = this.secondsToTime(this.state.seconds);
+        this.setState({ time: timeLeftVar });
+    }
+
+    startTimer() {
+        if (this.timer === 0 && this.state.seconds > 0) {
+            this.timer = setInterval(this.countDown, 1000);
+        }
+    }
+
+    countDown() {
+        // Remove one second, set state so a re-render happens.
+        let seconds = this.state.seconds - 1;
         this.setState({
-            timerTime: this.state.timerStart
+            time: this.secondsToTime(seconds),
+            seconds: seconds,
         });
+
+        if (seconds > 0) {
+            this.setState({
+                exercise1: '☆',
+                exercise2: '☆',
+                exercise3: '☆',
+                exercise4: '☆',
+            })
+        }
+
+        if (seconds < 135) {
+            this.setState({
+                exercise1: '★',
+            })
+        }
+
+        if (seconds < 90) {
+            this.setState({
+                exercise2: '★',
+            })
+        }
+
+        if (seconds < 45) {
+            this.setState({
+                exercise3: '★',
+            })
+        }
+
+        // Check if we're at zero.
+        if (seconds === 0) {
+            clearInterval(this.timer);
+            this.setState({
+                exerciseComplete: true,
+                exercise4: '★',
+            })
+        }
     }
 
     render() {
-        const { timerTime, timerStart, timerOn } = this.state;
-        let seconds = ("0" + (Math.floor((timerTime / 1000) % 60) % 60)).slice(-2);
-        // let minutes = ("0" + Math.floor((timerTime / 60000) % 60)).slice(-2);
-        // let hours = ("0" + Math.floor((timerTime / 3600000) % 60)).slice(-2);
-
         return (
-            <div className="Countdown">
-                <div className="Countdown-header">Countdown</div>
-
-                <div className="Countdown-display">
-
-                    <div className="Countdown-time">
-                        {seconds}
-                    </div>
-
+            <section>
+                <div className="progress">
+                    <p className="progress__star">{this.state.exercise1}</p>
+                    <p className="progress__star">{this.state.exercise2}</p>
+                    <p className="progress__star">{this.state.exercise3}</p>
+                    <p className="progress__star">{this.state.exercise4}</p>
                 </div>
-                {timerOn === false &&
-                    (timerStart === 0 || timerTime === timerStart) && (
-                        <button onClick={this.startTimer}>Start</button>
-                    )}
-            </div>
+                <div className="timer">
+                    <button className="timer__button" onClick={this.startTimer}>Start</button>
+                    <div className="timer__display">
+                        <div className="timer__displayMinutes">
+                            <h2 className="timerTitle">minutes</h2>
+                            <p className="timerTime">{this.state.time.m}</p>
+                        </div>
+                        <p className="timerColon">:</p>
+                        <div className="timer__displaySeconds">
+                            <h2 className="timerTitle">seconds</h2>
+                            <p className="timerTime">{this.state.time.s}</p>
+                        </div>
+                    </div>
+                    {
+                        this.state.exerciseComplete === true && (
+                            <Link to="/meditate" className="complete">Complete</Link>
+                        )
+                    }
+                </div>
+            </section>
         );
     }
 }
-
 export default Countdown;

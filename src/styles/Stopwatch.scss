@@ -1,15 +1,13 @@
 .stopwatch {
     text-align: center;
     margin: 0 auto;
-    border-radius: 4px;
-    padding: 100px 20px;
-    height: 500px;
+    padding: 20px 20px 250px;
+    height: fit-content;
     width: 100%;
     background-color: rgb(22, 27, 31);
-    &__title {
-      margin: 0 auto 10px;
-      font-size: 32px;
-      text-transform: capitalize;
+    &__text {
+      font-size: 22px;
+      margin-bottom: 15px;
     }
     &__buttonsWrapper {
       display: flex;

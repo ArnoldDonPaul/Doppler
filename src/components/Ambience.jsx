@@ -58,7 +58,12 @@ class Ambience extends Component {
 
         return (
             <section className="ambience">
-                <h1 className="ambience__title">Ambience</h1>
+                <div className="welcomeHero">
+                    <h1 className="welcomeHero__title">2 Minute Meditation</h1>
+                    <p className="welcomeHero__text">Take a moment to calm your body and clear your mind</p>
+                    <p className="welcomeHero__text">Select from a list of ambient sounds to start making this space your own</p>
+                </div>
+                <h2 className="ambience__title">Ambience</h2>
                 <ul className="ambience__list">
                     {list}
                     {this.state.player === "playing" && (

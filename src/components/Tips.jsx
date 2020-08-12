@@ -11,9 +11,6 @@ class Tips extends Component {
     render() {
         return (
             <>
-                <div className="buttonBox">
-                    <Link to="/" className="finishButton">Finish</Link>
-                </div>
                 <div className="tips">
                     <p className="tips__text" onClick={() => this.setState({ inhaleExpanded: true })}>Inhale deeply through your nose and into the pit of your stomach.</p>
                     {
@@ -51,6 +48,9 @@ class Tips extends Component {
                             </div>
                         )
                     }
+                    <div className="buttonBox">
+                        <Link to="/" className="finishButton">Finish</Link>
+                    </div>
                 </div>
             </>
         );

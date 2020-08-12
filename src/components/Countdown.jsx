@@ -39,7 +39,8 @@ class Countdown extends Component {
 
     startTimer() {
         if (this.timer === 0 && this.state.seconds > 0) {
-            this.timer = setInterval(this.countDown, 1000);
+            this.timer = setInterval(this.countDown, 70);
+            // this.timer = setInterval(this.countDown, 1000);
         }
     }
 

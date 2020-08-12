@@ -1,3 +1,7 @@
+.timerSection {
+    background-color: #161b1f;
+}
+
 .progress {
     width: 90%;
     display: flex;
@@ -44,6 +48,7 @@
     display: flex;
     flex-direction: column-reverse;
     justify-content: flex-end;
+    background-color: #161b1f;
     &__display {
         display: flex;
         font-size: 30px;

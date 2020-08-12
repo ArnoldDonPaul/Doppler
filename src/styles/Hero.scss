@@ -1,83 +1,25 @@
 .hero {
   padding-top: 50px;
-  height: 100vh;
 }
 
-.dopplerLogo {
-    margin: 0 auto 50px;
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    cursor: pointer;
-  }
-  
-  .circle {
-    border: 2px solid white;
-    border-radius: 50%;
-    width: 80%;
-    height: 80%;
-    .circle:hover & {
-      transform: translateX(10%);
-    }
-  }
-  
-  .circle0 {
-    @extend .circle;
-    width: 200px;
-    height: 200px;
-    position: relative;
-  }
-  
-  .circle1 {
-    @extend .circle;
-    position: absolute;
-    transition: all .5s linear;
-    top: 10%;
-    left: 10%;
-  }
-  
-  .circle2 {
-    @extend .circle;
-    position: absolute;
-    transition: all .5s linear;
-    top: 10%;
-    left: 10%;
-  }
-  
-  .circle3 {
-    @extend .circle;
-    position: absolute;
-    transition: all .5s linear;
-    top: 10%;
-    left: 10%;
-  }
-  
-  .circle4 {
-    @extend .circle;
-    position: absolute;
-    transition: all .5s linear;
-    top: 10%;
-    left: 10%;
-  }
-
 .welcome {
-  height: 300px;
-  width: 300px;
   margin: 0 auto;
   text-align: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
   &__title {
     font-size: 32px;
     text-transform: capitalize;
     margin: 20px 0;
   }
   &__nav {
+    width: 275px;
     font-size: 28px;
     text-transform: capitalize;
     text-decoration: none;
     color: white;
-    margin: 20px 0;
+    margin: 0 auto;
     background-color: #202b33;
     border: solid 1px grey;
     border-radius: 4px;

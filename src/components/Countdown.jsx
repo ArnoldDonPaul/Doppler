@@ -90,7 +90,7 @@ class Countdown extends Component {
 
     render() {
         return (
-            <section>
+            <section className="timerSection">
                 <div className="progress">
                     <p className="progress__star">{this.state.exercise1}</p>
                     <p className="progress__star">{this.state.exercise2}</p>
